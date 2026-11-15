@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070711">
+  <title>Glowing Login Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <h1>Glowing Login Form</h1>
+
+    <section class="showcase">
+      <div class="ambient ambient-cyan"></div>
+      <div class="ambient ambient-purple"></div>
+
+      <form class="login-card" id="loginForm" novalidate>
+        <h2>LOGIN</h2>
+
+        <div class="input-box">
+          <input id="email" name="email" type="email" placeholder="Email Address" autocomplete="email" required>
+          <small class="field-error" id="emailError"></small>
+        </div>
+
+        <div class="input-box">
+          <input id="password" name="password" type="password" placeholder="Password" autocomplete="current-password" required minlength="6">
+          <small class="field-error" id="passwordError"></small>
+        </div>
+
+        <div class="form-options">
+          <label class="remember"><input type="checkbox" name="remember"> <span>Remember me</span></label>
+          <a href="#" id="forgotLink">Forgot Password?</a>
+        </div>
+
+        <button class="login-button" type="submit">LOGIN</button>
+
+        <p class="signup">Don't have an account? <a href="#" id="signupLink">Sign Up</a></p>
+        <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="code-panel">
+      <div class="code-heading">
+        <span>CSS CODE — INPUT FOCUS GLOW</span>
+        <button id="copyCss" type="button">Copy CSS</button>
+      </div>
+      <pre><code id="focusCss">.input-box input {
+  width: 100%;
+  height: 55px;
+  padding: 0 18px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 10px;
+  outline: none;
+  color: #ffffff;
+  font-size: 16px;
+  transition: .4s;
+}
+
+.input-box input:focus {
+  border-color: #00eaff;
+  box-shadow:
+    0 0 8px #00eaff,
+    0 0 20px rgba(0,234,255,.5);
+  background: rgba(0,234,255,.03);
+}</code></pre>
+    </section>
+    <p class="note">Demo form only — no credentials are sent to a server.</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
